@@ -1,0 +1,66 @@
+aside {
+    width: 300px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+main {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.categoria-titulo {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+
+/* BOX DE PRODUTO */
+
+.conteiner {
+    width: 300px;
+    padding: 2px;
+    display: inline-block;
+    margin: 50px;
+}
+
+.borda {
+    border-radius: 20px;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 50px;
+}
+
+.nome-produto {
+    padding: 20px 0px 00px 0px;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0px 0px 0px;
+}
+
+.descricao {
+    padding: 10px;
+}
+
+.preco {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.botao {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 15px;
+    transition: 0.5s;
+    font-size: 21px;
+}
