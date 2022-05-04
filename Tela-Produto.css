@@ -1,0 +1,43 @@
+.box-principal {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.box-esq {
+    display: inline-block;
+    width: 55%;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.box-dir {
+    display: inline-block;
+    width: 40%;
+}
+
+.preco {
+    font-size: 60px;
+}
+
+.nome-produto {
+    font-size: 60px;
+}
+
+.botao {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 15px;
+    transition: 0.5s;
+    font-size: 21px;
+}
