@@ -1,7 +1,7 @@
 main {
     background-color: rgb(243, 243, 243);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .foto {
@@ -12,6 +12,12 @@ main {
     background-image: url(../img/Calça.webp);
     background-position: center;
     background-size: cover;
+    transition: 0.5s;
+}
+
+.foto:hover {
+    width: 505px;
+    height: 505px;
 }
 
 .box-principal {
@@ -41,6 +47,7 @@ main {
 
 .preco {
     font-size: 60px;
+    text-decoration: underline;
 }
 
 .tamanho {
@@ -54,7 +61,7 @@ main {
 .nome-produto {
     font-size: 60px;
     text-align: center;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
 }
 
 .botao {
