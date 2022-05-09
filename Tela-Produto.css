@@ -1,3 +1,7 @@
+* {
+    font-family: Cambria;
+}
+
 main {
     background-color: rgb(243, 243, 243);
     padding-top: 100px;
@@ -24,10 +28,40 @@ main {
     background-color: #fff;
     margin-left: 20%;
     margin-right: 20%;
-    text-align: center;
     border: 3px solid #000;
     padding: 20px;
     border-radius: 35px;
+}
+
+.foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+    background-image: url(../img/download.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.caixa-texto {
+    width: 900px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.perfil {
+    display: inline-block;
+    padding: 10px;
+}
+
+.Comentarios {
+    background-color: #fff;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 3px solid #000;
+    padding: 20px;
+    border-radius: 35px;
+    position: relative;
+    margin-top: 70px;
 }
 
 .box-esq {
@@ -52,21 +86,24 @@ main {
 
 .tamanho {
     padding: 10px 0px 10px 0px;
+    text-align: center;
 }
 
 .categoria {
     padding-bottom: 10px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .nome-produto {
     font-size: 60px;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .texto {
     margin-bottom: 30px;
+    height: 330px;
 }
 
 .botao {
