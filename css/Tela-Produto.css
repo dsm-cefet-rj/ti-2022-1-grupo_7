@@ -69,11 +69,13 @@ main {
     padding: 20px;
     text-align: center;
     margin-right: 15px;
+    margin: auto;
 }
 
 .box-dir {
     padding: 20px;
     font-size: 25px;
+    margin: auto;
 }
 
 .preco {
@@ -132,5 +134,4 @@ main {
     border-radius: 5px;
     transition: 0.1s;
     border: 3px solid #0b0b0f;
-    padding-left: 20px;
 }
