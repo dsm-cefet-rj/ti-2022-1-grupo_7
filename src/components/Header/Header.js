@@ -31,6 +31,9 @@ function Header () {
                         <li className='nav-item'>
                             <a className="nav-link" href="#">Anunciar</a>
                         </li>
+                        <li className='nav-item'>
+                            <a className="nav-link" href="#">Catálogo</a>
+                        </li>
                     </ul>
                 </div>
                 
