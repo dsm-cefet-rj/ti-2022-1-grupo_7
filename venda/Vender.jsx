@@ -21,11 +21,6 @@ const Vender = ({handleChange, formInputData, handleSubmit}) => {
                       onChange={handleChange} value={formInputData.nomeDescricao} name="DescricaoProduto" className="form-control"  placeholder="Descrição da peça"
                       />  
 
-                  <label>Quantidade:</label>
-                    <input 
-                        type="number" onChange={handleChange} value={formInputData.qtdProduto} name="qtdProduto" className="form-control" placeholder="Defina a quantidade de peças"
-                    />
-
                   <label>Preço:</label>
                     <input 
                         type="number" onChange={handleChange} value={formInputData.valorProduto} name="precoProduto" className="form-control" placeholder="Defina o preço da peça"
