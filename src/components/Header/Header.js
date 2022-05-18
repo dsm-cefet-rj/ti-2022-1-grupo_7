@@ -2,10 +2,6 @@ import './Header.css';
 
 function Header () {
 
-    function botaoEvento(){
-        
-    }
-
     return(
     <header>
         <nav className="navbar navbar-dark">
@@ -19,17 +15,15 @@ function Header () {
                     <input className="form-control m-2" type="text" />
                 </form>
 
-                {/* <button 
+                {<button 
                     onClick = {botaoEvento}
                     className="navbar-toggler" 
                     type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#menuCursos" 
-                    style="cursor:pointer" 
-                    aria-expanded="true"
-                >
+                    data-bs-target="#menuCursos"
+                    aria-expanded="true">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                {on && <div className="navbar-collapse collapse" id="menuCursos">
+                <div className="navbar-collapse collapse" id="menuCursos">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link" href="#">Perfil</a>
@@ -39,7 +33,7 @@ function Header () {
                         </li>
                     </ul>
                 </div>
-                }    */}
+                
             </div>
 
         </nav>
