@@ -8,8 +8,7 @@ const App = () => {
   const [formInputData, setformInputData] = useState(
       {
       nomeProduto:'',
-      qtdProduto:''
-      }
+       }
   );
  
   const handleChange=(evnt)=>{  
