@@ -92,9 +92,9 @@ main {
     margin-bottom: 40px;
 }
 
-.texto {
-    margin-bottom: 30px;
-    height: 330px;
+#texto{
+    min-height: 300px;
+    text-align: start
 }
 
 .botao {
