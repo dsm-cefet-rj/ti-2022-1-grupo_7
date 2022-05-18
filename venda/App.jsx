@@ -23,7 +23,7 @@ const App = () => {
       {
         const newData = (data)=>([...data, formInputData])
         setTableData(newData);
-        const emptyInput= {nomeProduto:'', qtdProduto:''}
+        const emptyInput= {nomeProduto:''}
         setformInputData(emptyInput)
       }
   }
