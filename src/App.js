@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Anunciar from './pages/Anunciar'
 import Perfil from './pages/Perfil'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Perfil" element={<Perfil/>}/> 
         <Route path="/Anunciar" element={<Anunciar/>}/> 
       </Routes>  
+      <Footer/>
     </Router>
   );
 }
