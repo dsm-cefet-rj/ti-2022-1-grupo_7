@@ -7,7 +7,7 @@ function Anunciar(){
         return(
   <>
   
-    <Header/>
+   
     
         <Criar handleImputChange/>
   </>  
