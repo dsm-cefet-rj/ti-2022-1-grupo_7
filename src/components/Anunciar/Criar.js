@@ -56,7 +56,7 @@ function handleImputChange(e){
                         </select>
                   
                   <br></br>
-                    <input type="submit" value="Submit"  />
+                    <input type="submit" value="Anunciar"  />
 
     
                 </form>
