@@ -1,4 +1,5 @@
 import './Header.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function Header () {
     
@@ -26,13 +27,13 @@ function Header () {
                 <div className="navbar-collapse collapse" id="menuCursos">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Perfil</a>
+                            <Link className="nav-link" to="/">Catálogo</Link>
                         </li>
                         <li className='nav-item'>
-                            <a className="nav-link" href="#">Anunciar</a>
+                            <Link className="nav-link" to="/Anunciar">Anunciar</Link>
                         </li>
                         <li className='nav-item'>
-                            <a className="nav-link" href="#">Catálogo</a>
+                            <Link className="nav-link" to="/Perfil">Perfil</Link>
                         </li>
                     </ul>
                 </div>
