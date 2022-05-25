@@ -1,11 +1,16 @@
 import './Criar.css'
 import React,{useState} from 'react';
 
-export default function Criar(){
+export default function Criar(props){
 const [projeto,setProjeto] = useState({}); 
-function handleImputChange(e){
+   function handleImputChange(e){
     setProjeto({...projeto,[e.target.name]: e.target.value});
 }
+   function handleSubmit(e){
+    e.preventDefault();
+    props.setProjeos(props.projetos.concat(projeto));
+}
+  
   
     return (
         <>
@@ -56,7 +61,7 @@ function handleImputChange(e){
                         </select>
                   
                   <br></br>
-                    <input type="submit" value="Anunciar"  />
+                    <input type="submit" value="Submit"  />
 
     
                 </form>
