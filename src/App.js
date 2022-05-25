@@ -1,10 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home'
-import Anunciar from './pages/Anunciar'
-import Perfil from './pages/Perfil'
+import Home from './pages/HomePag'
+import Anunciar from './pages/AnunciarPag'
+import Perfil from './pages/PerfilPag'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
+import ProdutoPag from './pages/ProdutoPag';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Perfil" element={<Perfil/>}/> 
-        <Route path="/Anunciar" element={<Anunciar/>}/> 
+        <Route path="/Anunciar" element={<Anunciar/>}/>
+        <Route path="/ProdutoPag" element={<ProdutoPag/>}/> 
       </Routes>  
       <Footer/>
     </Router>
