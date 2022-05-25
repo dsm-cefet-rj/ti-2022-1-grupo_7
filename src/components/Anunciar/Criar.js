@@ -61,7 +61,7 @@ const [projeto,setProjeto] = useState({});
                         </select>
                   
                   <br></br>
-                    <input type="submit" value="Submit"  />
+                    <input type="submit" value="Anunciar"  />
 
     
                 </form>
