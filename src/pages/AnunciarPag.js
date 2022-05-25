@@ -10,8 +10,6 @@ function Anunciar(){
     <Header/>
     
         <Criar handleImputChange/>
-
-      </main>
   </>  
    
   )
