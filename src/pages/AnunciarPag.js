@@ -15,4 +15,4 @@ function Anunciar(){
   )
 }
 
-export default App;
+export default Anunciar;
