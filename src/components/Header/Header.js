@@ -25,7 +25,7 @@ function Header () {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="navbar-collapse collapse" id="menuCursos">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav" id="icones">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Catálogo</Link>
                         </li>

@@ -2,13 +2,15 @@ import './Criar.css'
 import React,{useState} from 'react';
 
 export default function Criar(props){
-const [projeto,setProjeto] = useState({}); 
-   function handleImputChange(e){
-    setProjeto({...projeto,[e.target.name]: e.target.value});
+const [projeto,setProjeto] = useState({});
+
+    function handleImputChange(e){
+        setProjeto({...projeto,[e.target.name]: e.target.value});
 }
+
    function handleSubmit(e){
-    e.preventDefault();
-    props.setProjeos(props.projetos.concat(projeto));
+       e.preventDefault();
+       props.setProjeos(props.projetos.concat(projeto));
 }
   
   
@@ -16,30 +18,45 @@ const [projeto,setProjeto] = useState({});
         <>
            
             <div id="Vender">
-                <div id="Titulo">
-                    <h1>Produtos</h1>
-                </div>
-                <form id="form_produto" class="Add_form">
+                <h1 className='Titulo'>Produtos</h1>
+                <form id="form_produto" className="Add_form">
                     <label>Nome do produto:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} value={projeto.nome} name="nomeProduto" className="form-control"  placeholder="Nome"
+                        onChange={handleImputChange} 
+                        value={projeto.nome} 
+                        name="nomeProduto" 
+                        className="form-control"  
+                        placeholder="Nome"
                     />
                     <label>Descrição:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} value={projeto.descricao} name="descricao" className="form-control"  placeholder="Descrição do Produto"
+                        onChange={handleImputChange} 
+                        value={projeto.descricao} 
+                        name="descricao" 
+                        className="form-control"  
+                        placeholder="Descrição do Produto"
                     />
                     <label>Quantidade:</label>
                     <input 
-                        type="number" onChange={handleImputChange} value={projeto.qtdProduto} name="qtdProduto" className="form-control" placeholder="Defina a quantidade de peças"
+                        type="number" 
+                        onChange={handleImputChange} 
+                        value={projeto.qtdProduto} 
+                        name="qtdProduto" 
+                        className="form-control" 
+                        placeholder="Defina a quantidade de peças"
                     />
 
 
                     <label>Valor:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} value={projeto.valor} name="ValorProduto" className="form-control"  placeholder="Preço do produto"
+                        onChange={handleImputChange} 
+                        value={projeto.valor} 
+                        name="ValorProduto" 
+                        className="form-control"  
+                        placeholder="Preço do produto"
                     />
                   
                 
