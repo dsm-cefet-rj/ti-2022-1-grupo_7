@@ -1,30 +1,28 @@
 import './Criar.css'
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 
 export default function Criar(props){
-const [projeto,setProjeto] = useState({});
+
+    const [produto, setProduto] = useState();
 
     function handleImputChange(e){
-        setProjeto({...projeto,[e.target.name]: e.target.value});
-}
+        setProduto({...produto,[e.target.name]: e.target.value});
+    }
 
-   function handleSubmit(e){
-       e.preventDefault();
-       props.setProjeos(props.projetos.concat(projeto));
-}
-  
+    function handleSubmit(e){
+        e.preventDefault();
+        props.setProduto(props.produto.concat(produto));
+    }
   
     return (
         <>
-           
             <div id="Vender">
                 <h1 className='Titulo'>Produtos</h1>
-                <form id="form_produto" className="Add_form">
-                    <label>Nome do produto:</label>
+                <form id="form_produto" className="Add_form" onSubmit={handleSubmit}>
+                    <label>Nome do props.produto:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} 
-                        value={projeto.nome} 
+                        onChange={handleImputChange}     
                         name="nomeProduto" 
                         className="form-control"  
                         placeholder="Nome"
@@ -33,17 +31,15 @@ const [projeto,setProjeto] = useState({});
                     <input 
                         type="text" 
                         onChange={handleImputChange} 
-                        value={projeto.descricao} 
-                        name="descricao" 
+                        name="descProduto" 
                         className="form-control"  
                         placeholder="Descrição do Produto"
-                    />
+                        />
                     <label>Quantidade:</label>
                     <input 
                         type="number" 
                         onChange={handleImputChange} 
-                        value={projeto.qtdProduto} 
-                        name="qtdProduto" 
+                        name="quantidade" 
                         className="form-control" 
                         placeholder="Defina a quantidade de peças"
                     />
@@ -52,24 +48,30 @@ const [projeto,setProjeto] = useState({});
                     <label>Valor:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} 
-                        value={projeto.valor} 
-                        name="ValorProduto" 
+                        onChange={handleImputChange}  
+                        name="preco" 
                         className="form-control"  
-                        placeholder="Preço do produto"
+                        placeholder="Preço do props.produto"
                     />
                   
                 
                   <label>Categoria:</label>
-                        <select onChange={handleImputChange}>
-                            <option value="P">Calça</option>
-                            <option value="M">Camisa</option>
-                            <option value="G">Jaqueta e Casacos</option>
-                            <option value="GG">Tênis</option>
+                        <select 
+                        onChange={handleImputChange}
+                        name="categoria"
+                        >
+                            <option value="Calça">Calça</option>
+                            <option value="Camisa">Camisa</option>
+                            <option value="Jaqueta e Casacos">Jaqueta e Casacos</option>
+                            <option value="Tenis">Tênis</option>
                         </select>
 
                         <label>Tamanho:</label>
-                        <select onChange={handleImputChange}>
+                        <select 
+                        onChange={handleImputChange}
+                        // onChange={(e) => props.setProduto(e.target.value)}
+                        name="tamanho"
+                        >
                             <option value="PP">PP</option>
                             <option value="P">P</option>
                             <option value="M">M</option>
@@ -77,9 +79,8 @@ const [projeto,setProjeto] = useState({});
                             <option value="GG">GG</option>
                         </select>
                   
-                  <br></br>
-                    <input type="submit" value="Anunciar"  />
-
+                <br></br>
+                    <input type="submit" value="Anunciar"/>
     
                 </form>
             </div>

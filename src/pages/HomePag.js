@@ -1,10 +1,11 @@
 import Catalogo from "../components/catalogo/Catalogo"
 
-function Home(){
+function Home({produto}){
 
     return(
         <div>
-           <Catalogo/>
+           <Catalogo
+            produto={produto}/>
         </div>
     )
 }

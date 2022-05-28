@@ -1,18 +1,18 @@
 import Produto from "../components/Produto/Produto"
 import Global from "../components/Global/Global"
 
-function ProdutoPag(){
+function ProdutoPag({preco, nomeProduto, descProduto, tamanho, categoria, quantidade}){
 
     return(
         <div>
             <Produto
                 foto = {Global.foto} 
-                preco = {Global.preco}
-                nomeProduto={Global.nomeProduto} 
-                categoria={Global.categoria} 
-                quantidade = {Global.quantidade}
-                tamanho={Global.tamanho}
-                descProduto={Global.descProduto}/>
+                preco = {preco}
+                nomeProduto={nomeProduto} 
+                categoria={categoria} 
+                quantidade = {quantidade}
+                tamanho={tamanho}
+                descProduto={descProduto}/>
         </div>
     )
 }

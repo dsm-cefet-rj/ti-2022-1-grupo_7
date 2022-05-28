@@ -1,15 +1,15 @@
 
 import Criar from '../components/Anunciar/Criar';
-import React, { useState } from "react";
+import React from "react";
 
 
-function Anunciar(){
+function Anunciar({setProduto, produto}){
         return(
   <>
   
    
     
-        <Criar handleImputChange/>
+      <Criar handleImputChange setProduto={setProduto} produto={produto}/>
   </>  
    
   )
