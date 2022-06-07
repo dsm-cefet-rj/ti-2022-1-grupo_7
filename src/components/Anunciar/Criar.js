@@ -1,17 +1,29 @@
 import './Criar.css'
 import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { addBox } from '../Redux/boxSlice';
+import { useHistory } from "react-router-dom";
 
-export default function Criar(props){
+
+export default function Criar(){
 
     const [produto, setProduto] = useState();
+    const dispatch = useDispatch();
+    // const history = useHistory();
 
-    function handleImputChange(e){
-        setProduto({...produto,[e.target.name]: e.target.value});
-    }
+    // const handleSubmit = () =>{
+    //     dispatch(changeUser(produto))
+    // }
+
+     function handleImputChange(e){
+         setProduto({...produto,[e.target.name]: e.target.value});
+     }
 
     function handleSubmit(e){
         e.preventDefault();
-        props.setProduto(props.produto.concat(produto));
+        dispatch(addBox(produto));
+        // history.push('/produtos');
+        // props.setProduto(props.produto.concat(produto));
     }
   
     return (

@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import userReducer from './userSlice'
+import produtosReducer from './boxSlice';
 
 export default configureStore({
     reducer:{
-        user: userReducer
+        produtos: produtosReducer
     }
 })
