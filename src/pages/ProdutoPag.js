@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 function ProdutoPag(){
 
-    const produto = useSelector(state=>state.openBox);
+    const produto = useSelector(state=>state.box);
 
     return(
         <div>
