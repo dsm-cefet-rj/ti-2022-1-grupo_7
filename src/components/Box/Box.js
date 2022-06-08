@@ -1,5 +1,6 @@
 import './Box.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import addProduct  from '../Redux/boxSlice'
 
 function Box(props){
 
@@ -10,7 +11,7 @@ function Box(props){
                                 <img className="w-100 " src="CalcaVerde.jpg" alt="Roupa"/>
                                 <h2 className="mt-2 ">{props.produto.nomeProduto}</h2>
                                 <p>{props.produto.descProduto}</p>
-                                <Link className="botao" to="/ProdutoPag">Comprar</Link>
+                                <Link className="botao" to="/ProdutoPag" onChange={addProduct} >Comprar</Link>
                             </div>
                         </div>
                     </div>
