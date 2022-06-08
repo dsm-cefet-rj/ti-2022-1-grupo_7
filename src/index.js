@@ -5,10 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './components/Redux/store';
+import {fetchBanco} from './components/Redux/boxSlice';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
+store.dispatch(fetchBanco());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

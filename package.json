@@ -20,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "banco4": "json-server --watch src/components/Redux/Banco.json --port 3004",
+    "banco0": "json-server --watch src/components/Redux/Banco.json --port 3000"
+
   },
   "eslintConfig": {
     "extends": [

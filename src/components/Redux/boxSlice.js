@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const initialProduto =
     [{
@@ -81,6 +81,15 @@ function deleteBoxReducer(produtos, id){
     return produtos.filter((p) => p.id !== id);
 }
 
+export const fetchBanco = createAsyncThunk('Banco/fetchBanco',
+    async () => {
+        return await (await fetch('hhtp://localhost:3004/Banco')).json();
+    });
+
+function fulfilledProjetosReducer(projetosState, projetosFetched){
+    return projetosFetched;
+}
+
 export const boxSlice = createSlice({
     name:'box',
     initialState: initialProduto,
@@ -89,7 +98,11 @@ export const boxSlice = createSlice({
         // openBox: (state, action) => openBoxReducer (state, action.payload),
         addBox: (state , action) => addBoxReducer (state, action.payload),
         deleteBox: (state, action) => deleteBoxReducer (state, action.payload)
-    }       
+    },
+    extraReducers: {
+        [fetchBanco.fulfilled]: (state, action) => fulfilledProjetosReducer(state, action.payload),
+    }
+
 })
 
 export const { addBox, deleteBox} = boxSlice.actions

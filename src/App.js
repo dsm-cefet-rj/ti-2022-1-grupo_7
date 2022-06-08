@@ -7,12 +7,17 @@ import Perfil from './pages/PerfilPag'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import ProdutoPag from './pages/ProdutoPag';
+import {fetchBanco} from './components/Redux/boxSlice'
+import { Provider } from 'react-redux';
+import store from './components/Redux/store';
 
+store.dispatch(fetchBanco());
 
 function App() {
 
 
   return (
+    <Provider store={store}>
     <Router>
       <Header/>
       <Routes>
@@ -23,6 +28,7 @@ function App() {
       </Routes>  
       <Footer/>
     </Router>
+    </Provider>
   );
 }
 
