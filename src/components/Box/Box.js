@@ -1,6 +1,6 @@
 import './Box.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { openBox }  from '../Redux/openBoxSlice'
+import { openBox }  from '../Redux/boxSlice'
 import { useDispatch } from "react-redux";
 
 
