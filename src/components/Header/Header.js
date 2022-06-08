@@ -7,10 +7,9 @@ function Header () {
     <header>
         <nav className="navbar navbar-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                     <img src = "JV.png" height="40" width="50" alt="Logo"/> 
-                    
-                </a>
+                </Link>
 
                 <form className="d-flex">
                     <input className="form-control m-2" type="text" />

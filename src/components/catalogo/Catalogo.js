@@ -2,6 +2,7 @@ import Box from "../Box/Box"
 import './catalogo.css'
 
 function Catalogo({produto}){
+
     return(
         <div>
             <div class="conteiner ">

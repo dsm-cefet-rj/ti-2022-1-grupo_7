@@ -1,8 +1,19 @@
 import './Box.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import addProduct  from '../Redux/boxSlice'
+import { openBox }  from '../Redux/openBoxSlice'
+import { useDispatch } from "react-redux";
+
 
 function Box(props){
+
+    const dispatch = useDispatch();
+    // const senha = props.produto.id; 
+
+    function click(e){
+        e.preventDefault();
+        dispatch(openBox(props.produto.id));
+    }
+    
 
     return(
                     <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
@@ -11,7 +22,12 @@ function Box(props){
                                 <img className="w-100 " src="CalcaVerde.jpg" alt="Roupa"/>
                                 <h2 className="mt-2 ">{props.produto.nomeProduto}</h2>
                                 <p>{props.produto.descProduto}</p>
-                                <Link className="botao" to="/ProdutoPag" onChange={addProduct} >Comprar</Link>
+                                <p>{props.produto.id}</p>
+                                <a onClick={click}>
+                                    <Link className="botao" to="/ProdutoPag" >
+                                        Comprar
+                                    </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

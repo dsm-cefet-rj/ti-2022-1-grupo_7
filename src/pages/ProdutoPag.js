@@ -1,18 +1,14 @@
 import Produto from "../components/Produto/Produto"
 import Global from "../components/Global/Global"
+import { useSelector } from "react-redux";
 
-function ProdutoPag({preco, nomeProduto, descProduto, tamanho, categoria, quantidade}){
+function ProdutoPag(){
+
+    const produto = useSelector(state=>state.openBox);
 
     return(
         <div>
-            <Produto
-                foto = {Global.foto} 
-                preco = {preco}
-                nomeProduto={nomeProduto} 
-                categoria={categoria} 
-                quantidade = {quantidade}
-                tamanho={tamanho}
-                descProduto={descProduto}/>
+            {produto.map((struct) => <Produto produto={struct}/>)}
         </div>
     )
 }

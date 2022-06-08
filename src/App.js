@@ -11,72 +11,14 @@ import ProdutoPag from './pages/ProdutoPag';
 
 function App() {
 
-    const[produto, setProduto] = useState(
-      [{
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      },
-      {
-        nomeProduto:'Calça Verde',
-        descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-        tamanho:'P',
-        categoria:'Calça',
-        preco:'249.99'
-      }]
-    );
 
   return (
     <Router>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home produto={produto} setProduto={setProduto}/>}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/Perfil" element={<Perfil/>}/> 
-        <Route path="/Anunciar" element={<Anunciar setProduto={setProduto} produto={produto}/>} />
+        <Route path="/Anunciar" element={<Anunciar />} />
         <Route path="/ProdutoPag" element={<ProdutoPag/>} /> 
       </Routes>  
       <Footer/>
