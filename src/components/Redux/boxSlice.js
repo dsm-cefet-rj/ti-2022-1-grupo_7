@@ -67,10 +67,10 @@ const initialProduto =
     }];
 
 
-// function openBoxReducer(produtos, id){
-//     const filtro = produtos.filter((p) => p.id == id)
-//     return filtro;
-// }
+ function openBoxReducer(produtos, id){
+     const filtro = produtos.filter((p) => p.id == id)
+     return filtro;
+ }
 
 function addBoxReducer(produtos, produto){
     let proxId = 1 + produtos.map(p => p.id).reduce((x,y) => Math.max(x,y));
@@ -95,7 +95,7 @@ export const boxSlice = createSlice({
     initialState: initialProduto,
        
     reducers: {
-        // openBox: (state, action) => openBoxReducer (state, action.payload),
+        openBox: (state, action) => openBoxReducer (state, action.payload),
         addBox: (state , action) => addBoxReducer (state, action.payload),
         deleteBox: (state, action) => deleteBoxReducer (state, action.payload)
     },
@@ -105,5 +105,5 @@ export const boxSlice = createSlice({
 
 })
 
-export const { addBox, deleteBox} = boxSlice.actions
+export const { addBox, deleteBox, openBox} = boxSlice.actions
 export default boxSlice.reducer
