@@ -1,9 +1,12 @@
 import './Criar.css'
 import React, {useState} from 'react';
+import { addBox } from '../Redux/boxSlice';
+import { useDispatch } from "react-redux";
 
-export default function Criar(props){
+export default function Criar(){
 
     const [produto, setProduto] = useState();
+    const dispatch = useDispatch();
 
     function handleImputChange(e){
         setProduto({...produto,[e.target.name]: e.target.value});
@@ -11,14 +14,15 @@ export default function Criar(props){
 
     function handleSubmit(e){
         e.preventDefault();
-        props.setProduto(props.produto.concat(produto));
+        dispatch(addBox(produto))
+        // props.setProduto(props.produto.concat(produto));
     }
   
     return (
         <>
             <div id="Vender">
                 <h1 className='Titulo'>Produtos</h1>
-                <form id="form_produto" className="Add_form" onSubmit={handleSubmit}>
+                <form id="form_produto" className="Add_form">
                     <label>Nome do props.produto:</label>
                     <input 
                         type="text" 
@@ -80,7 +84,7 @@ export default function Criar(props){
                         </select>
                   
                 <br></br>
-                    <input type="submit" value="Anunciar"/>
+                    <input onClick={handleSubmit} type="submit" value="Anunciar"/>
     
                 </form>
             </div>

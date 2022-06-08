@@ -1,0 +1,68 @@
+{
+    "produtos": 
+        [{
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        }
+    ]
+}
