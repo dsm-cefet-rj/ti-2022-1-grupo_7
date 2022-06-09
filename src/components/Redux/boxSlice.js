@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import global from '../Global/Global'
-const initialProduto =
+
+const initialProduto = global;
 
 
  function openBoxReducer(produtos, id){

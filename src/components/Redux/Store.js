@@ -4,8 +4,7 @@ import openBoxReducer from './openBoxSlice'
 
 const store = configureStore({
     reducer:{
-        box: boxReducer,
-        openBox: openBoxReducer
+        box: boxReducer
     }
 })
 

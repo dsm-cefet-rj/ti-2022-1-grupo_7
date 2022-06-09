@@ -1,5 +1,4 @@
-class Global{
-        [{
+const Global= [{
                 id: 1,
                 nomeProduto:'Calça Verde',
                 descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
@@ -63,6 +62,6 @@ class Global{
                 categoria:'Calça',
                 preco:'249.99'
               }];
-        }
+        
 
 export default Global

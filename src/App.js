@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer'
 import ProdutoPag from './pages/ProdutoPag';
 import {fetchBanco} from './components/Redux/boxSlice'
 import { Provider } from 'react-redux';
-import store from './components/Redux/Store';
+import store from './components/Redux/store.js';
 
 store.dispatch(fetchBanco());
 

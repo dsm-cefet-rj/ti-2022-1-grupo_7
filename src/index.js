@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './components/Redux/Store';
+import store from './components/Redux/store.js';
 import {fetchBanco} from './components/Redux/boxSlice';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
