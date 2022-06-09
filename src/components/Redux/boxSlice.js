@@ -1,70 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-
+import global from '../Global/Global'
 const initialProduto =
-    [{
-      id: 1,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 2,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 3, 
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 4,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 5,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 6,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 7,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    },
-    {
-      id: 8,
-      nomeProduto:'Calça Verde',
-      descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
-      tamanho:'P',
-      categoria:'Calça',
-      preco:'249.99'
-    }];
 
 
 // function openBoxReducer(produtos, id){
@@ -78,6 +14,7 @@ function addBoxReducer(produtos, produto){
 }
 
 function deleteBoxReducer(produtos, id){
+
     return produtos.filter((p) => p.id !== id);
 }
 

@@ -1,11 +1,68 @@
 class Global{
-        static foto ="CalcaVerde.jpg" 
-        static preco = "249,99"
-        static nomeProduto="Calça Verde" 
-        static categoria="Calças" 
-        static quantidade= 1
-        static tamanho="P"
-        static descProduto="Calça verde feita de tecido resistente a chuvas, fogo e até mesmo sujeira, usada como uniforme em exercitos russos."
-}
+        [{
+                id: 1,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 2,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 3, 
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 4,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 5,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 6,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 7,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              },
+              {
+                id: 8,
+                nomeProduto:'Calça Verde',
+                descProduto:'Calça muito verde, tão verde que se camufla em árvores de todo o deserto',
+                tamanho:'P',
+                categoria:'Calça',
+                preco:'249.99'
+              }];
+        }
 
 export default Global
