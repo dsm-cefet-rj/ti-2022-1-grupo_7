@@ -1,0 +1,90 @@
+//bd do jason-server aqui
+
+//comando para criar banco
+//npm install -g json-server
+
+//vai no criar.js
+//const createList = (form) => {
+        //fetch("http://localhost:3000/prod", {
+          //method: "POST",
+          //headers: {
+          //"Content-Type": "application/json"
+          //},
+          //body: JSON.stringify(form)
+        //})
+    //}
+ //vai no criar.js
+
+    //comando para ver banco
+    //json-server --watch public/banco.json
+    
+    //banco.json
+    //abaixo vai no banco.json
+    {
+  "prod":[
+{
+  "id": 1,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco":249.99
+},
+{
+  "id": 2,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco":249.99
+},
+{
+  "id": 3, 
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+},
+{
+  "id": 4,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+},
+{
+  "id": 5,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+},
+{
+  "id": 6,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+},
+{
+  "id": 7,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+},
+{
+  "id": 8,
+  "nomeProduto":"Calça Verde",
+  "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+  "tamanho":"P",
+  "categoria":"Calça",
+  "preco": 249.99
+}]}
+
+//precisa trocar o host porque o react roda no mesmo host atual
