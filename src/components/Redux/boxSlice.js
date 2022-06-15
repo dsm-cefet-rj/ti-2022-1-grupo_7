@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import global from '../Global/Global'
 
-const initialProduto = global;
+const initialProduto = [];
 
 
  function openBoxReducer(produtos, id){
@@ -21,10 +21,10 @@ function deleteBoxReducer(produtos, id){
 
 export const fetchBanco = createAsyncThunk('Banco/fetchBanco',
     async () => {
-        return await (await fetch('hhtp://localhost:3004/Banco')).json();
+        return await (await fetch('http://localhost:3004/Banco')).json();
     });
 
-function fulfilledProjetosReducer(projetosState, projetosFetched){
+function fullfillProjetosReducer(projetosState, projetosFetched){
     return projetosFetched;
 }
 
@@ -38,7 +38,7 @@ export const boxSlice = createSlice({
         deleteBox: (state, action) => deleteBoxReducer (state, action.payload)
     },
     extraReducers: {
-        [fetchBanco.fulfilled]: (state, action) => fulfilledProjetosReducer(state, action.payload),
+        [fetchBanco.fulfilled]: (state, action) => fullfillProjetosReducer(state, action.payload),
     }
 
 })
