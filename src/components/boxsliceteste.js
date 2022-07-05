@@ -48,7 +48,7 @@ export const boxSlice = createSlice({
         [fetchBanco.pending]: (state, action) => {state.status='loading'},
         [fetchBanco.rejected]: (state, action) => {state.status='failed';state.erro=action.erro.message}
       
-    };
+    }
 
 })
 

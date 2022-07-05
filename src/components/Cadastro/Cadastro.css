@@ -1,0 +1,67 @@
+* {
+    font-family: Cambria;
+}
+
+.titulo{
+    font-size: 60px;
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.criar{
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+    color: rgb(41, 41, 41);
+    text-decoration: none;
+}
+
+.texto {
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+    color: #000;
+    text-decoration: none;
+}
+
+#borda {
+    border-radius: 5px;
+    transition: 0.1s;
+    border: 3px solid #0b0b0f;
+    padding-bottom: 70px;
+    margin: 0px 20% 0px 20%
+}
+
+#barra {
+    text-align: center;
+    width: 75%;
+    margin-left: 12%;
+    border-radius: 15px;
+}
+
+.botaos {
+    text-align: center;
+    color: #000;
+    width: 75%;
+    margin-top: 7%;
+    margin-left: 12%;
+    background-color: rgb(224, 224, 224);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.5s;
+    font-size: 21px;
+    border-width:1px;
+    border-style: none;
+    padding: 3px 0px 3px 0px;
+}
+
+.botaos:hover {
+    background-color: rgb(165, 165, 165);
+    color: #0b0b0f;
+}

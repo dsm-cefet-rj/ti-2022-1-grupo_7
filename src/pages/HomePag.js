@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 function Home(){
 
-    const produto = useSelector(state=>state.box);
+    const produto = useSelector(state=>state.box.produtos);
 
     return(
         <div>

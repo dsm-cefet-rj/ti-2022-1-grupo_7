@@ -86,7 +86,7 @@ main {
     text-align: center;
 }
 
-#texto{
+#textos{
     min-height: 300px;
     text-align: start
 }
@@ -120,7 +120,7 @@ main {
     color: #0b0b0f;
 }
 
-#borda {
+#bordas {
     border-radius: 5px;
     transition: 0.1s;
     border: 3px solid #0b0b0f;

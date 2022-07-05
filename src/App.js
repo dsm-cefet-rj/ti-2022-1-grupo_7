@@ -3,13 +3,16 @@ import React,{useState} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePag'
 import Anunciar from './pages/AnunciarPag'
-import Perfil from './pages/PerfilPag'
+import Login from './pages/LoginPag'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import ProdutoPag from './pages/ProdutoPag';
 import {fetchBanco} from './components/Redux/boxSlice'
 import { Provider } from 'react-redux';
 import store from './components/Redux/store.js';
+import Cadastrar from './pages/CadastroPerfilPag';
+import Perfil from './pages/PerfilPag'
+import BoxAdmPag from './pages/BoxAdmPag'
 
 store.dispatch(fetchBanco());
 
@@ -22,9 +25,12 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/Perfil" element={<Perfil/>}/> 
+        <Route path="/Login" element={<Login/>}/> 
         <Route path="/Anunciar" element={<Anunciar />} />
         <Route path="/ProdutoPag" element={<ProdutoPag/>} /> 
+        <Route path="/Cadastrar" element={<Cadastrar/>} /> 
+        <Route path="/Perfil" element={<Perfil/>} /> 
+        <Route path="/BoxAdmPag" element={<BoxAdmPag/>} /> 
       </Routes>  
       <Footer/>
     </Router>

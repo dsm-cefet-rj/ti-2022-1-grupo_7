@@ -1,4 +1,5 @@
 import Box from "../Box/Box"
+import BoxAdm from "../BoxAdm/BoxAdm"
 import './catalogo.css'
 
 function Catalogo({produto}){

@@ -32,7 +32,16 @@ function Header () {
                             <Link className="nav-link" to="/Anunciar">Anunciar</Link>
                         </li>
                         <li className='nav-item'>
+                            <Link className="nav-link" to="/Login">Login</Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link className="nav-link" to="/Cadastrar">Cadastrar</Link>
+                        </li>
+                        <li className='nav-item'>
                             <Link className="nav-link" to="/Perfil">Perfil</Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link className="nav-link" to="/BoxAdmPag">teste</Link>
                         </li>
                     </ul>
                 </div>

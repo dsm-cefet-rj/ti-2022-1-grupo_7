@@ -33,5 +33,6 @@ function Box(props){
                     </div>
     )
 }
+{/* <Link className="botao" to={`/ProdutoPag/${props.produto.id}`} ></Link> */}
 
 export default Box
