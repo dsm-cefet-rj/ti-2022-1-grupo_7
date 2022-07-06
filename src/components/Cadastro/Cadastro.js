@@ -22,7 +22,7 @@ export default function Cadastro(){
         <main>
             <div className="container">
                 <div className="card" id="borda">
-                        <p className='titulo'>Casdastro</p>
+                        <p className='titulo'>Cadastro</p>
                             <form></form>
                             <label className="texto">Nome:</label>
                             <input 
