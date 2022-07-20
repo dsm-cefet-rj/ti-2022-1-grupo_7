@@ -1,9 +1,34 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const cors = require("cors");
+const { connectionDB } = require('./database/index');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+connectionDB()
+
+const port = 8080;
+
+const app = express();
+
+app.use(cors());
+
+// application/json middleware
+app.use(express.json());
+
+// serve static files from public folder
+app.use(express.static("public"));
+
+const RotasLogin = require('./routes/login');
+const RotRotasUsuario = require('./routes/usuario'); 
+
+app.use('/login', RotasLogin);
+app.use('/usuario', RotRotasUsuario);
+
+// definir mensagem de erro para rotas não utilizadas
+app.use((req, res, next) => {
+    res.status(404).json({
+        message: "Route not found",
+    });
 });
 
-module.exports = router;
+app.listen(port, () => {
+    console.log(`Server running on port https://localhost:${port}`);
+});
