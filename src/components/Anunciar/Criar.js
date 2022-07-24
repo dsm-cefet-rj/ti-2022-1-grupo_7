@@ -3,7 +3,15 @@ import React, {useState} from 'react';
 import { addBox } from '../Redux/boxSlice';
 import { useDispatch } from "react-redux";
 
+
 export default function Criar(){
+
+    // const [ produto, setProduto] = useState({nomeProduto:'',
+    //                                     descProduto:'',
+    //                                     quantidade:'',
+    //                                     preco:'',
+    //                                     categoria:'',
+    //                                     tamanho:''})
 
     const [produto, setProduto] = useState();
     const dispatch = useDispatch();
@@ -12,9 +20,21 @@ export default function Criar(){
         setProduto({...produto,[e.target.name]: e.target.value});
     }
 
-    function handleSubmit(e){
+    function onSubmit(e){
         e.preventDefault();
+
         dispatch(addBox(produto))
+
+        setProduto({nomeProduto:'',
+                    descProduto:'',
+                    quantidade:'',
+                    preco:'',
+                    categoria:'',
+                    tamanho:''})
+
+      //  dispatch(showMessage());
+      //  setTimeout(() => { dispatch(hideMessage()) }, 2500);
+
         // props.setProduto(props.produto.concat(produto));
     }
   
@@ -22,11 +42,11 @@ export default function Criar(){
         <>
             <div id="Vender">
                 <h1 className='Titulo'>Produtos</h1>
-                <form id="form_produto" className="Add_form">
-                    <label>Nome do props.produto:</label>
+                <form onSubmit={onSubmit}  id="form_produto" className="Add_form">
+                    <label>Nome do produto:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange}     
+                        onChange={handleImputChange}          
                         name="nomeProduto" 
                         className="form-control"  
                         placeholder="Nome"
@@ -34,7 +54,7 @@ export default function Criar(){
                     <label>Descrição:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange} 
+                        onChange={handleImputChange}
                         name="descProduto" 
                         className="form-control"  
                         placeholder="Descrição do Produto"
@@ -52,7 +72,7 @@ export default function Criar(){
                     <label>Valor:</label>
                     <input 
                         type="text" 
-                        onChange={handleImputChange}  
+                        onChange={handleImputChange}
                         name="preco" 
                         className="form-control"  
                         placeholder="Preço do props.produto"
@@ -84,7 +104,7 @@ export default function Criar(){
                         </select>
                   
                 <br></br>
-                    <input onClick={handleSubmit} type="submit" value="Anunciar"/>
+                    <input type="submit" value="Anunciar"/>
     
                 </form>
             </div>
