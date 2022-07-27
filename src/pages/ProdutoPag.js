@@ -1,9 +1,5 @@
-import Produto from "../components/Produto/Produto"
-import Global from "../components/Global/Global"
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import Produto from "../components/Usuario/Produto/Produto"
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from "react";
-import { deleteBookingServer, updateBookingServer, selectBookingById } from '../components/Redux/boxSlice';
 
 function ProdutoPag(){
     

@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePag'
 import Anunciar from './pages/AnunciarPag'
 import Login from './pages/LoginPag'
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer'
+import Header from './components/Publico/Header/Header';
+import Footer from './components/Publico/Footer/Footer'
 import ProdutoPag from './pages/ProdutoPag';
 import {fetchBanco} from './components/Redux/boxSlice'
 import { Provider } from 'react-redux';
@@ -13,6 +13,7 @@ import store from './components/Redux/store.js';
 import Cadastrar from './pages/CadastroPerfilPag';
 import Perfil from './pages/PerfilPag'
 import BoxAdmPag from './pages/BoxAdmPag'
+// import Message from './components/Publico/Message/Message';
 
 store.dispatch(fetchBanco());
 
@@ -23,6 +24,7 @@ function App() {
     <Provider store={store}>
     <Router>
       <Header/>
+      {/* <Message/> */}
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/Login" element={<Login/>}/> 

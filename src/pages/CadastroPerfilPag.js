@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Cadastro from "../components/Cadastro/Cadastro"
+import Cadastro from "../components/Publico/Cadastro/Cadastro"
 
 function Cadastrar(){
     

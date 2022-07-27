@@ -1,56 +1,84 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import global from '../Global/Global'
+const INITIAL_STATE = [
+    {
+        "id": 1,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 2,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 3,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 4,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 5,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 6,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 7,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        },
+        {
+        "id": 8,
+        "nomeProduto":"Calça Verde",
+        "descProduto":"Calça muito verde, tão verde que se camufla em árvores de todo o deserto",
+        "tamanho":"P",
+        "categoria":"Calça",
+        "preco": 249.99
+        }
+];
 
-const initialProduto = {
-    status:'notloaded',
-    produtos:[],
-    erro:null
-};
+// export default function reducer(state = INITIAL_STATE, action) {
+//     return state;
+// }
 
-
-
-function openBoxReducer(state, id){
-    const filtro = state.produtos.filter((p) => p.id == id)
-    return filtro;
-}
-
-function addBoxReducer(state, produto){
-    let proxId = 1 + state.produtos.map(p => p.id).reduce((x,y) => Math.max(x,y));
-    return state.produtos.concat([{...produto, id: proxId}]);
-}
-
-function deleteBoxReducer(state, id){
-
-    return state.produtos.filter((p) => p.id !== id);
-}
-
-export const fetchBanco = createAsyncThunk('Banco/fetchBanco',
-    async () => {
-        return await (await fetch('http://localhost:3004/Banco')).json();
-    });
-
-function fullfillProjetosReducer(projetosState, projetosFetched){
-    projetosState.status='loaded';
-    projetosState.produtos = projetosFetched;
-}
-
-export const boxSlice = createSlice({
-    name:'box',
-    initialState: initialProduto,
-       
-    reducers: {
-        openBox: (state, action) => openBoxReducer (state, action.payload),
-        addBox: (state , action) => addBoxReducer (state, action.payload),
-        deleteBox: (state, action) => deleteBoxReducer (state, action.payload)
-    },
-    extraReducers: {
-        [fetchBanco.fulfilled]: (state, action) => fullfillProjetosReducer(state, action.payload),
-        [fetchBanco.pending]: (state, action) => {state.status='loading'},
-        [fetchBanco.rejected]: (state, action) => {state.status='failed';state.erro=action.erro.message}
-      
+export default function reducer(state = INITIAL_STATE, action) {
+    if(action.type =='ADD_BOX ') {
+        return [ ...state, action.box ];
     }
+    return state;
+}
 
-})
-
-export const { addBox, deleteBox, openBox} = boxSlice.actions
-export default boxSlice.reducer
+export const addBox = box => {
+    return {
+        type: 'ADD_BOX',
+        box
+    }
+}

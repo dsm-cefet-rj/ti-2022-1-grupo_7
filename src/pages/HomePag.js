@@ -1,9 +1,10 @@
-import Catalogo from "../components/catalogo/Catalogo"
+import Catalogo from "../components/Usuario/catalogo/Catalogo"
 import { useSelector } from "react-redux";
+
 
 function Home(){
 
-    const produto = useSelector(state=>state.box.produtos);
+    const produto = useSelector(state=>state.box);
 
     return(
         <div>
@@ -13,3 +14,15 @@ function Home(){
 }
 
 export default Home
+// function Home(){
+
+//     const produto = useSelector((state) => state.box);
+
+//     return(
+//         <div>
+//            <Catalogo produto = {produto}/>
+//         </div>
+//     )
+// }
+
+// export default Home
