@@ -1,5 +1,9 @@
-import Produto from "../components/Usuario/Produto/Produto"
+import Produto from "../components/Produto/Produto"
+import Global from "../components/Global/Global"
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { deleteBookingServer, updateBookingServer, selectBookingById } from '../components/Redux/boxSlice';
 
 function ProdutoPag(){
     
@@ -25,7 +29,7 @@ function ProdutoPag(){
     //     setNewBooking({...newBooking, [e.target.name]: e.target.value})
     // }
     
-    const produto = useSelector(state=>state.box.produtos);
+    const produto = useSelector(state=>state.box.produtoSelecionado);
 
     return(
         <div>

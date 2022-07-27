@@ -1,4 +1,5 @@
-import Criar from '../components/Publico/Anunciar/Criar';
+
+import Criar from '../components/Anunciar/Criar';
 import React from "react";
 
 

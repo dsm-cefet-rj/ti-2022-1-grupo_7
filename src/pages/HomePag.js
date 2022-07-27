@@ -1,28 +1,13 @@
-import Catalogo from "../components/Usuario/catalogo/Catalogo"
-import { useSelector } from "react-redux";
+import Catalogo from "../components/catalogo/Catalogo"
 
 
 function Home(){
 
-    const produto = useSelector(state=>state.box);
-
     return(
         <div>
-           <Catalogo produto = {produto}/>
+           <Catalogo/>
         </div>
     )
 }
 
 export default Home
-// function Home(){
-
-//     const produto = useSelector((state) => state.box);
-
-//     return(
-//         <div>
-//            <Catalogo produto = {produto}/>
-//         </div>
-//     )
-// }
-
-// export default Home

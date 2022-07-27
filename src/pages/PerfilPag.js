@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-// import Perfil from "../components/Publico/Perfil/Perfil"
+import Perfil from "../components/Perfil/Perfil"
 
 function Status(){
 

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import BoxAdm from "../components/Adm/BoxAdm/BoxAdm"
+import BoxAdm from "../components/BoxAdm/BoxAdm"
 
 function BoxAdmPag(){
     
