@@ -18,7 +18,18 @@ function openBoxReducer(state, id){
 
 function addBoxReducer(state, produto){
     let proxId = 1 + state.produtos.map(p => p.id).reduce((x,y) => Math.max(x,y));
-    state.produtos = state.produtos.concat([{...produto, id: proxId}]);
+    //state.produtos = state.produtos.concat([{...produto, id: proxId}]);
+    fetch("http://localhost:8080/produtos/add", {
+        method: "POST",
+        body: JSON.stringify({...produto, id: proxId}),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(res){ console.log(res) })
+    window.location.href = "/";
 }
 
 function deleteBoxReducer(state, id){
@@ -27,7 +38,7 @@ function deleteBoxReducer(state, id){
 
 export const fetchBanco = createAsyncThunk('Banco/fetchBanco',
     async () => {
-        return await (await fetch('http://localhost:3004/Banco')).json();
+        return await (await fetch('http://localhost:8080/produtos')).json();
 });
 
 function fullfillProjetosReducer(projetosState, projetosFetched) {
