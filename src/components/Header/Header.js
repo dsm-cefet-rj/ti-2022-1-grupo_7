@@ -31,10 +31,13 @@ function Header() {
                                 <Link className="nav-link" to="/">Catálogo</Link>
                             </li>
                             {
-                                token ?
-                                    <li className='nav-item'>
-                                        <Link className="nav-link" to="/Anunciar">Anunciar</Link>
-                                    </li>
+                                token ?(
+                                    <>
+                                        <li className='nav-item'>
+                                            <Link className="nav-link" to="/Anunciar">Anunciar</Link>
+                                        </li>
+                                    </>
+                                )
                                     : null
                             }
                             {
@@ -60,13 +63,12 @@ function Header() {
                             </li>
                             {
                                 token ?
-                                    <li className='nav-item'>
-                                        <a className="nav-item"
+                                    <li className='nav-item nav-link mouse'
                                             onClick={() => {
                                                 localStorage.removeItem('token');
                                                 window.location.href = '/login';
                                             }}
-                                        >Logout</a>
+                                        >Logout
                                     </li>
                                     : null
                             }

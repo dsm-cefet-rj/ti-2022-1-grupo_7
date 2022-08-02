@@ -14,4 +14,7 @@ header {
     text-align: left;
 }
 
+.mouse {
+    cursor: pointer;
+}
 
