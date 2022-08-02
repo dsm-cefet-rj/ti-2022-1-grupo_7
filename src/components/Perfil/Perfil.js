@@ -1,57 +1,73 @@
 import './Perfil.css'
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { addBox } from '../Redux/boxSlice';
-import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-function Produto(){
+function Login() {
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    const [produto, setProduto] = useState();
-    const dispatch = useDispatch();
+    async function handleSubmit(e) {
+        e.preventDefault();
+        try{
+            const res = await fetch('http://localhost:8080/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            })
+            const data = await res.json();
+            const {token} = data;
+            localStorage.setItem('token', token);
+            window.location.href = '/';
+        } catch(err) {
+            console.log(err);
+        }
+    }
 
-function handleImputChange(e){
-    setProduto({...produto,[e.target.name]: e.target.value});
-}
+    
 
-function handleSubmit(e){
-    e.preventDefault();
-    dispatch(addBox(produto))
-    // props.setProduto(props.produto.concat(produto));
-}
-    return(
-
+    return (
 
         <main>
-        <div className="container">
-            <div className="card" id="borda">
-                <p className="titulo">Login</p>
-                <label className="texto">Email:</label>
-                    <input 
-                        type="email" 
-                        onChange={handleImputChange}     
-                        name="nome-produto" 
-                        className="form-control" 
-                        id="barra" 
-                        placeholder="Exemplo@email.com"
-                    />
-                <label className="texto">Senha:</label>
-                    <input 
-                        type="password" 
-                        onChange={handleImputChange}     
-                        name="nome-produto" 
+            <div className="container">
+                <div className="card" id="borda">
+                    <p className="titulo">Login</p>
+                    <label className="texto">Email:</label>
+                    <input
+                        type="email"
+                        name="nome-produto"
                         className="form-control"
-                        id="barra"  
+                        id="barra"
+                        placeholder="Exemplo@email.com"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                    <label className="texto">Senha:</label>
+                    <input
+                        type="password"
+                        name="nome-produto"
+                        className="form-control"
+                        id="barra"
                         placeholder="Senha"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
                     />
                     <input onClick={handleSubmit} type="submit" value="Logar"
-                    className="botaos"/>
+                        className="botaos" />
 
-                    <a className="criar" >ainda não possui conta</a>
-                    </div>
+                    <Link className="criar" to="/Cadastrar" >
+                        ainda não possui conta
+                    </Link>
+
                 </div>
+            </div>
         </main>
     )
 }
 
-export default Produto
+export default Login

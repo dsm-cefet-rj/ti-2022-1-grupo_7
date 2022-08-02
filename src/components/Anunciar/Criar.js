@@ -5,13 +5,6 @@ import { useDispatch } from "react-redux";
 
 export default function Criar(){
 
-    // const [ produto, setProduto] = useState({nomeProduto:'',
-    //                                     descProduto:'',
-    //                                     quantidade:'',
-    //                                     preco:'',
-    //                                     categoria:'',
-    //                                     tamanho:''})
-
     const [produto, setProduto] = useState();
     const dispatch = useDispatch();
 
@@ -24,17 +17,6 @@ export default function Criar(){
         console.log(produto)
         dispatch(addBox(produto))
 
-        // setProduto({nomeProduto:'',
-        //             descProduto:'',
-        //             quantidade:'',
-        //             preco:'',
-        //             categoria:'',
-        //             tamanho:''})
-
-        // dispatch(showMessage());
-        // setTimeout(() => { dispatch(hideMessage()) }, 2500);
-
-        // props.setProduto(props.produto.concat(produto));
     }
   
     return (
@@ -74,7 +56,7 @@ export default function Criar(){
                         onChange={handleImputChange}
                         name="preco" 
                         className="form-control"  
-                        placeholder="Preço do props.produto"
+                        placeholder="Preço do produto"
                     />
                   
                 

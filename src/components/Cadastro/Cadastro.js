@@ -1,21 +1,30 @@
 import './Cadastro.css'
-import React, {useState} from 'react';
-import { addBox } from '../Redux/boxSlice';
-import { useDispatch } from "react-redux";
+import React, { useState } from 'react';
 
 export default function Cadastro(){
 
-    const [produto, setProduto] = useState();
-    const dispatch = useDispatch();
+    const [nome, setNome] = useState('');
+    const [email , setEmail] = useState('');
+    const [senha , setSenha] = useState('');
 
-    function handleImputChange(e){
-        setProduto({...produto,[e.target.name]: e.target.value});
-    }
-
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-        dispatch(addBox(produto))
-        // props.setProduto(props.produto.concat(produto));
+        try {
+            fetch('http://localhost:8080/login/Cadastrar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    nome: nome,
+                    email: email,
+                    senha: senha
+                })
+            })
+            window.location.href = '/login';
+        }catch(err){
+            console.log(err)
+        }
     }
   
     return (
@@ -27,29 +36,30 @@ export default function Cadastro(){
                             <label className="texto">Nome:</label>
                             <input 
                                 type="text" 
-                                onChange={handleImputChange}     
-                                name="nomeProduto" 
+                                onChange={(e) => setNome(e.target.value)}  
+                                id="barra" 
                                 className="form-control"  
-                                id="barra"
                                 placeholder="Nome"
+                                value={nome}
+                                name="nome"
                             />
                             <label className="texto">Email:</label>
                             <input 
                                 type="email" 
-                                onChange={handleImputChange} 
-                                name="descProduto" 
-                                className="form-control"
-                                id="barra" 
                                 placeholder="Exemplo@email.com"
+                                onChange={(e) => setEmail(e.target.value)}
+                                id="barra" 
+                                className="form-control"
+                                value={email}
                                 />
                             <label className="texto">Senha:</label>
                             <input 
                                 type="password" 
-                                onChange={handleImputChange} 
-                                name="quantidade" 
-                                className="form-control"
-                                id="barra"
                                 placeholder="Senha"
+                                onChange={(e) => setSenha(e.target.value)}
+                                id="barra" 
+                                className="form-control"
+                                value={senha}
                             />
                             <input onClick={handleSubmit} type="submit" value="Cadastrar" className="botaos"/>
                             

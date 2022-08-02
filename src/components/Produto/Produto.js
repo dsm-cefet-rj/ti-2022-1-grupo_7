@@ -23,7 +23,6 @@ function Produto({produto}){
                                 <p className="categoria">Tamanho: <b>{produto.tamanho}</b></p>
                                 <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
                                 <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
-                                <p className="categoria">id: <b>{produto.id}</b></p>
                                 <a href="#" className="botao">Comprar</a>
                         </div>
                     </div>
