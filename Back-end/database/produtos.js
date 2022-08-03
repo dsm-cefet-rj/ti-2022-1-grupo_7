@@ -1,4 +1,5 @@
 const { connectionDB } = require(".");
+const { ObjectId } = require("mongodb");
 
 const getAllProdutos = async () => {
     const connection = await connectionDB(); 
@@ -14,6 +15,20 @@ const getAllProdutos = async () => {
     return produtos;
 };
 
+const removeProduto = async (produto) => {
+    const connection = await connectionDB();
+    console.log(produto);
+    await connection
+        .collection("produtos")
+        .deleteOne({"_id": ObjectId(produto)}, (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        });
+};
+
 const addProduto = async (produto) => {
     const connection = await connectionDB();
     await connection
@@ -27,4 +42,4 @@ const addProduto = async (produto) => {
         });
 };
 
-module.exports = { addProduto, getAllProdutos };
+module.exports = { addProduto, getAllProdutos, removeProduto };

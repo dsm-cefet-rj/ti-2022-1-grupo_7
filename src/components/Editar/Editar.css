@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+    font-family: 'courier new';
+      font-weight: 300;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+#form_produto {
+    margin-top: 15px;
+    margin-left: 15px;
+    
+  }
+  
+  .Add_form {
+      padding-right: 60px;
+      text-align: left;
+  }
+  
+  .Add_form label{
+      display: block;
+      line-height: 25px;
+      margin-bottom: 4px;
+      font-size: 18px;
+    font-family: Georgia, "Times New Roman";
+  }
+  
+  .Add_form input {
+      display: block;
+      width: 100%;
+      background: none;
+      padding: 7px 10px;
+      margin-bottom: 10
+      px;
+      outline: none;
+      font-size: 16px;
+      font-family: Georgia, "Times New Roman";
+  }
+  
+  .Add_form textarea {
+      display: block;
+      width: 100%;
+      height: 110px;
+      border: 3px solid #000;
+      background: none;
+      padding: 7px 10px;
+      margin-bottom: 20px;
+      outline: none;
+      font-size: 16px;
+      font-family: Georgia, "Times New Roman";
+  }
+  
+  select{
+        display: block;
+      width: 100%;
+      background: none;
+      padding: 7px 10px;
+      margin-bottom: 10px;
+      outline: none;
+      font-size: 16px;
+      font-family: Georgia, "Times New Roman";
+      
+  
+    
+  }
+
+  .foto{
+    border-radius: 0%;
+    height: auto;
+    width: auto;
+    max-width:200px;
+    max-height:150px;
+  }

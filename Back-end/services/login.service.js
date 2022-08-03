@@ -1,21 +1,21 @@
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken')
 
-const bd =[ { username: 'admin', password: 'admin' }]
+// const bd =[ { username: 'admin', password: 'admin' }]
 
-const authenticate = async ({ username, password }) => {
+// const authenticate = async ({ username, password }) => {
 
-    const user = bd.find(user => user.password == password && user.username == username)
+//     const user = bd.find(user => user.password == password && user.username == username)
 
-    if(user) {
-        const token = await jwt.sign ({ username }, 'configuracaodasuaaplicacao')
+//     if(user) {
+//         const token = await jwt.sign ({ username }, 'configuracaodasuaaplicacao')
 
-        return {
-            token,
-            user
-        };
-    }
-};
+//         return {
+//             token,
+//             user
+//         };
+//     }
+// };
 
-module.exports = {
-    authenticate
-}
+// module.exports = {
+//     authenticate
+// }

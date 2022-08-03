@@ -1,5 +1,7 @@
 import './BoxAdm.css'
 import { useDispatch } from "react-redux";
+// const { ObjectId } = require("mongodb");
+// const { connectionDB } = require(".");
 import { BrowserRouter as Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { deleteBox } from '../Redux/boxSlice';
@@ -11,7 +13,7 @@ function BoxAdm({produto}){
     function click(e){
         e.preventDefault();
         dispatch(deleteBox(produto.id));
-        window.location.href = "/";
+        // connectionDB.produtos.deleteOne({"_id": ObjectId(produto.id)});
     }
 
     return(
@@ -33,7 +35,8 @@ function BoxAdm({produto}){
                                 <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
                                 <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
                                 <a href="#" className="botao">Comprar</a>
-                                <a href="#" className="botaol">Editar</a>
+                                <a href="#" className="botaol"
+                                onClick={click}>Editar</a>
                                 <a href="#" className="botaol" 
                                 onClick={click}
                                 >Excluir</a>

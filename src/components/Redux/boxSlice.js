@@ -12,6 +12,7 @@ const initialProduto = {
 const bookingsAdapter = createEntityAdapter()
 
 
+
 function openBoxReducer(state, id){
     state.produtoSelecionado = state.produtos.filter((p) => p.id == id);
 }
@@ -33,7 +34,17 @@ function addBoxReducer(state, produto){
 }
 
 function deleteBoxReducer(state, id){
-    return state.produtos.filter((p) => p.id !== id);
+    fetch("http://localhost:8080/produtos/remove", {
+        method: "POST",
+        body: JSON.stringify({id: id}),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(res){ console.log(res) })
+    window.location.href = "/";
 }
 
 export const fetchBanco = createAsyncThunk('Banco/fetchBanco',

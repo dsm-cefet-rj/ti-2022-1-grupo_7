@@ -2,17 +2,33 @@ import './Box.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { openBox }  from '../Redux/boxSlice'
 import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from 'react'
 
 
 function Box(props){
 
-    const dispatch = useDispatch();
-    // const senha = props.produto.id; 
-
+    const dispatch = useDispatch(); 
+    const token = localStorage.getItem('token');
+    const [userType, setUserType] = useState("");
+    
     function click(e){
+        
         e.preventDefault();
         dispatch(openBox(props.produto.id));
+        // if(userType == "adm"){
+        //     window.location.href = "/BoxAdmPag";
+        // }else{
+        //     window.location.href = "/ProdutoPag";
+        // }
     }
+        
+        useEffect(() => {
+            if (token) {
+                const tokenData = JSON.parse(atob(token.split(".")[1]));
+                setUserType(tokenData.tipo);
+            }
+        })
+        
     
 
     return(
@@ -23,7 +39,8 @@ function Box(props){
                                 <h2 className="mt-2 ">{props.produto.nomeProduto}</h2>
                                 <p>{props.produto.descProduto}</p>
                                 <a onClick={click}>
-                                    <Link className="botao" to="/BoxAdmPag" >
+                                    <Link className="botao" 
+                                    to={userType == "adm" ? "/BoxAdmPag" : "/ProdutoPag"} >
                                         Comprar
                                     </Link>
                                 </a>
