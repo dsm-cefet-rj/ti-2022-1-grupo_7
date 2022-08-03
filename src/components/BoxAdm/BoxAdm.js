@@ -12,7 +12,9 @@ function BoxAdm({produto}){
 
     function clickA(e){
         e.preventDefault();
-        dispatch(deleteBox(produto.id));
+        if(window.confirm("deseja excluir esse produto?") == true){
+            dispatch(deleteBox(produto));
+        }
     }
 
     function clickE(e){

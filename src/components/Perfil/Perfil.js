@@ -18,12 +18,20 @@ function Login() {
                 body: JSON.stringify({
                     email: email,
                     password: password
-                })
+                }),
+                catch(err) {
+                    console.log(err);
+                }
             })
+            
             const data = await res.json();
             const {token} = data;
             localStorage.setItem('token', token);
-            window.location.href = '/';
+            if(token == undefined){
+                alert("Usuario ou senha inválidos");
+                token = null;
+            }
+            window.location.href = '/';            
         } catch(err) {
             console.log(err);
         }
