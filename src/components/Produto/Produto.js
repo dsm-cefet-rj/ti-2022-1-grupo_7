@@ -1,9 +1,24 @@
 import './Produto.css'
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { deleteBox, editBox, comprar } from '../Redux/boxSlice';
 
 function Produto({produto}){
 
+    const dispatch = useDispatch();
+    const token = localStorage.getItem('token');
+
+    function clickC(e){
+        e.preventDefault();
+        if(token != null){
+            dispatch(comprar(produto));
+            console.log(produto.id)
+            window.location.href="/"
+        }else{
+            alert("Você precisa estar logado para poder comprar")
+            window.location.href="/Login"
+        }
+    }
 
     return(
         <main>
@@ -23,7 +38,7 @@ function Produto({produto}){
                                 <p className="categoria">Tamanho: <b>{produto.tamanho}</b></p>
                                 <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
                                 <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
-                                <a href="#" className="botao">Comprar</a>
+                                <a href="#" className="botao" onClick={clickC}>Comprar</a>
                         </div>
                     </div>
                 </div>
