@@ -1,11 +1,15 @@
-import Criar from '../components/Anunciar/Criar';
+import Edicao from '../components/Editar/Edicao';
+import { useSelector } from "react-redux";
 import React from "react";
 
 
-function Editar({setProduto, produto}){
+function Editar(){
+
+    const produto = useSelector(state=>state.box.produtoSelecionado);
+    
         return(
   <>
-    <Criar handleImputChange setProduto={setProduto} produto={produto}/>
+    <Edicao produtos={produto}/>
   </>    
   )
 }

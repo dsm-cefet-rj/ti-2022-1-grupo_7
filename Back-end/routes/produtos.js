@@ -1,5 +1,5 @@
 var express = require('express');
-const { getAllProdutos, addProduto, removeProduto } = require('../database/produtos');
+const { getAllProdutos, addProduto, removeProduto, editProduto } = require('../database/produtos');
 var router = express.Router();
 
 
@@ -29,6 +29,18 @@ router.route('/remove')
 
     let produto = req.body.id;
     await removeProduto(produto);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.json(await getAllProdutos());
+
+  });
+
+router.route('/edit')
+  .post(async (req, res) => {
+
+    let produto = req.body;
+    await editProduto(produto);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

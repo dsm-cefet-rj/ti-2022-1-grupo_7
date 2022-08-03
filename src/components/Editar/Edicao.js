@@ -1,10 +1,11 @@
-import './Editar.css'
+import './Edicao.css'
 import React, { useState } from 'react';
-import { addBox } from '../Redux/boxSlice';
+import { editBox } from '../Redux/boxSlice';
 import { useDispatch } from "react-redux";
 
-export default function Editar() {
+export default function Edicao({produtos}) {
 
+    console.log(produtos[0])
     const [produto, setProduto] = useState();
     const dispatch = useDispatch();
 
@@ -14,8 +15,9 @@ export default function Editar() {
 
     function onSubmit(e) {
         e.preventDefault();
-        console.log(produto)
-        dispatch(addBox(produto))
+        console.log(produtos[0].id);
+        dispatch(editBox({...produto, id: produtos[0].id}))
+        window.location.href="/";
 
     }
 
@@ -41,6 +43,7 @@ export default function Editar() {
                         name="nomeProduto"
                         className="form-control"
                         placeholder="Nome"
+                        defaultValue={produtos.nomeProduto}
                     />
                     <label>Descrição:</label>
                     <input
@@ -49,6 +52,7 @@ export default function Editar() {
                         name="descProduto"
                         className="form-control"
                         placeholder="Descrição do Produto"
+                        value={produtos.descProduto}
                     />
                     <label>Quantidade:</label>
                     <input
@@ -57,6 +61,7 @@ export default function Editar() {
                         name="quantidade"
                         className="form-control"
                         placeholder="Defina a quantidade de peças"
+                        value={produtos.quantidade}
                     />
 
 
@@ -67,6 +72,7 @@ export default function Editar() {
                         name="preco"
                         className="form-control"
                         placeholder="Preço do produto"
+                        defaultValue={produtos.preco}
                     />
 
 
@@ -74,6 +80,7 @@ export default function Editar() {
                     <select
                         onChange={handleImputChange}
                         name="categoria"
+                        defaultValue={produtos.categoria}
                     >
                         <option value="Calça">Calça</option>
                         <option value="Camisa">Camisa</option>
@@ -86,6 +93,7 @@ export default function Editar() {
                         onChange={handleImputChange}
                         // onChange={(e) => props.setProduto(e.target.value)}
                         name="tamanho"
+                        defaultValue={produtos.tamanho}
                     >
                         <option value="PP">PP</option>
                         <option value="P">P</option>
@@ -95,7 +103,7 @@ export default function Editar() {
                     </select>
 
                     <br></br>
-                    <input type="submit" value="Anunciar" />
+                    <input type="submit" value="Editar" />
 
                 </form>
             </div>

@@ -49,7 +49,6 @@ function App() {
               ? (
                 <>
                   <Route path="/Anunciar" element={<Anunciar />} />
-                  <Route path="/Editar" element={<Editar />} />
                 </>
                 )
               : null
@@ -58,6 +57,7 @@ function App() {
           {userType === "adm" && (
             <>
               <Route path="/BoxAdmPag" element={<BoxAdmPag />} />
+              <Route path="/Editar" element={<Editar />} />
             </>
           )}
 

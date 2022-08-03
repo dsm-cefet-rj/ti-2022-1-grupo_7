@@ -29,6 +29,27 @@ const removeProduto = async (produto) => {
         });
 };
 
+const editProduto = async (produto) => {
+    const connection = await connectionDB();
+    console.log(produto.id);
+    console.log(produto);
+    await connection
+        .collection("produtos")
+        .updateOne({"_id": ObjectId(produto.id)},
+                    {$set: {nomeProduto : (produto.nomeProduto),
+                            descProduto : produto.descProduto, 
+                            quantidade : produto.quantidade, 
+                            preco : produto.preco, 
+                            categoria : produto.categoria, 
+                            tamanho : produto.tamanho}}, (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        });
+};
+
 const addProduto = async (produto) => {
     const connection = await connectionDB();
     await connection
@@ -42,4 +63,4 @@ const addProduto = async (produto) => {
         });
 };
 
-module.exports = { addProduto, getAllProdutos, removeProduto };
+module.exports = { addProduto, getAllProdutos, removeProduto, editProduto};
