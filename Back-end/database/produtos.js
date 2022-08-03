@@ -50,6 +50,34 @@ const editProduto = async (produto) => {
         });
 };
 
+const comprarProduto = async (produto) => {
+    const connection = await connectionDB();
+    console.log(produto.id);
+    console.log(produto);
+    await connection
+        .collection("produtos")
+        .updateOne({"_id": ObjectId(produto.id)},
+                    {$set: {quantidade : produto.quantidade - 1, 
+                            }}, (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        });
+    if(produto.quantidade == 1){
+        await connection
+        .collection("produtos")
+        .deleteOne({"_id": ObjectId(produto)}, (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        });
+    }
+};
+
 const addProduto = async (produto) => {
     const connection = await connectionDB();
     await connection
@@ -63,4 +91,4 @@ const addProduto = async (produto) => {
         });
 };
 
-module.exports = { addProduto, getAllProdutos, removeProduto, editProduto};
+module.exports = { addProduto, getAllProdutos, removeProduto, editProduto, comprarProduto};

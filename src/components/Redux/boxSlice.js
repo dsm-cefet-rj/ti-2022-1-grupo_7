@@ -60,6 +60,19 @@ function editBoxReducer(state, produto){
     .then(function(res){ console.log(res) })
     .catch(function(res){ console.log(res) })
 }
+function comprarReducer(state, produto){
+    console.log("id:", produto.id);
+    fetch("http://localhost:8080/produtos/comprar", {
+        method: "POST",
+        body: JSON.stringify({...produto}),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(function(res){ console.log(res) })
+    .catch(function(res){ console.log(res) })
+}
 
 export const fetchBanco = createAsyncThunk('Banco/fetchBanco',
     async () => {
@@ -79,7 +92,8 @@ export const boxSlice = createSlice({
         openBox: (state, action) => openBoxReducer(state, action.payload),
         addBox: (state, action) => addBoxReducer(state, action.payload),
         deleteBox: (state, action) => deleteBoxReducer(state, action.payload),
-        editBox: (state, action) => editBoxReducer(state, action.payload)      
+        editBox: (state, action) => editBoxReducer(state, action.payload),      
+        comprar: (state, action) => comprarReducer(state, action.payload)      
     },
     extraReducers: {
         [fetchBanco.fulfilled]: (state, action) => fullfillProjetosReducer(state, action.payload),
@@ -89,7 +103,7 @@ export const boxSlice = createSlice({
     }
 
 })
-export const { addBox, deleteBox, openBox, editBox} = boxSlice.actions
+export const { addBox, deleteBox, openBox, editBox, comprar} = boxSlice.actions
 export default boxSlice.reducer
 
 export const {

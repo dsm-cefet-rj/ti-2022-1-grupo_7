@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 // const { connectionDB } = require(".");
 import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { deleteBox, editBox } from '../Redux/boxSlice';
+import { deleteBox, editBox, comprar } from '../Redux/boxSlice';
 
 function BoxAdm({produto}){
 
@@ -19,6 +19,13 @@ function BoxAdm({produto}){
         e.preventDefault();
         dispatch(editBox(produto));
         console.log(produto.id)
+    }
+
+    function clickC(e){
+        e.preventDefault();
+        dispatch(comprar(produto));
+        console.log(produto.id)
+        window.location.href="/"
     }
 
     return(
@@ -39,7 +46,7 @@ function BoxAdm({produto}){
                                 <p className="categoria">Tamanho: <b>{produto.tamanho}</b></p>
                                 <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
                                 <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
-                                <a href="#" className="botao">Comprar</a>
+                                <a href="#" className="botao" onClick={clickC}>Comprar</a>
                                 <a onClick={clickE}>
                                     <Link to="/Editar" className="botaol">
                                         Editar
