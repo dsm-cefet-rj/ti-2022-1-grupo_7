@@ -4,7 +4,7 @@ function Footer(){
 
     return(
         <div className="rodape">
-            <p>RJV</p>
+            <p>JV</p>
         </div>
     )
 }

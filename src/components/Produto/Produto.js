@@ -12,7 +12,7 @@ function Produto({produto}){
                 <div className="card-body ">
                     <div className="row ">
                         <div className="oofset-2 col-sm-12 col-md-12 col-lg-5  box-esq">
-                            <img className="w-100 " src='CalcaVerde.jpg' alt="Calça "/>
+                            <img className="w-100 " src='Roupinhas.jpg' alt="Calça "/>
                             <p className="preco">R$ <span className="bold">{produto.preco}</span></p>
 
                         </div>

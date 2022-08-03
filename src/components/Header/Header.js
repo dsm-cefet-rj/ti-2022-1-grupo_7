@@ -13,9 +13,9 @@ function Header() {
                         <img src="JV.png" height="40" width="50" alt="Logo" />
                     </Link>
 
-                    <form className="d-flex">
+                    {/* <form className="d-flex">
                         <input className="form-control m-2" type="text" />
-                    </form>
+                    </form> */}
 
                     <button
                         className="navbar-toggler"

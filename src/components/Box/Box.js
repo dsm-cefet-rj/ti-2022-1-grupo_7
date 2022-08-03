@@ -35,7 +35,7 @@ function Box(props){
                     <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                         <div className="card borda ">
                             <div className="card-body ">
-                                <img className="w-100 " src="CalcaVerde.jpg" alt="Roupa"/>
+                                <img className="w-100 " src="Roupinhas.jpg" alt="Roupa"/>
                                 <h2 className="mt-2 ">{props.produto.nomeProduto}</h2>
                                 <p>{props.produto.descProduto}</p>
                                 <a onClick={click}>
