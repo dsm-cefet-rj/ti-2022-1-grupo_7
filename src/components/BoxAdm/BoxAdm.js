@@ -40,9 +40,8 @@ function BoxAdm({produto}){
                                 <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
                                 <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
                                 <a href="#" className="botao">Comprar</a>
-                                <a className="botaol"
-                                onClick={clickE}>
-                                    <Link to="/Editar">
+                                <a onClick={clickE}>
+                                    <Link to="/Editar" className="botaol">
                                         Editar
                                         </Link>
                                         </a>

@@ -40,7 +40,7 @@ function App() {
           {/* <Route path="/Login" element={<Login />} /> */}
           <Route path="/ProdutoPag" element={<ProdutoPag />} />
 
-          <Route path="/Perfil" element={<Perfil />} />
+          {/* <Route path="/Perfil" element={<Perfil />} /> */}
           {/* <Route path="/BoxAdmPag" element={<BoxAdmPag />} /> */}
 
           {/* Rotas usuário */}

@@ -90,7 +90,7 @@ export default function Criar() {
                         <option value="PP">PP</option>
                         <option value="P">P</option>
                         <option value="M">M</option>
-                        <option value="GG">G</option>
+                        <option value="G">G</option>
                         <option value="GG">GG</option>
                     </select>
 

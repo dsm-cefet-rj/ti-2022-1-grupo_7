@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 export default function Edicao({produtos}) {
 
     console.log(produtos[0])
-    const [produto, setProduto] = useState();
+    console.log("desc:", produtos[0].descProduto)
+    const [produto, setProduto] = useState(produtos[0]);
     const dispatch = useDispatch();
 
     function handleImputChange(e) {
@@ -24,7 +25,7 @@ export default function Edicao({produtos}) {
     return (
         <>
             <div id="Vender">
-                <h1 className='Titulo'>Produtos</h1>
+                <h1 className='Titulo'>Editar</h1>
                 <form onSubmit={onSubmit} id="form_produto" className="Add_form">
                     {/* <div>
                         <form class="upload-imagem">
@@ -43,7 +44,7 @@ export default function Edicao({produtos}) {
                         name="nomeProduto"
                         className="form-control"
                         placeholder="Nome"
-                        defaultValue={produtos.nomeProduto}
+                        defaultValue={produtos[0].nomeProduto}
                     />
                     <label>Descrição:</label>
                     <input
@@ -52,7 +53,7 @@ export default function Edicao({produtos}) {
                         name="descProduto"
                         className="form-control"
                         placeholder="Descrição do Produto"
-                        value={produtos.descProduto}
+                        defaultValue={produtos[0].descProduto}
                     />
                     <label>Quantidade:</label>
                     <input
@@ -61,7 +62,7 @@ export default function Edicao({produtos}) {
                         name="quantidade"
                         className="form-control"
                         placeholder="Defina a quantidade de peças"
-                        value={produtos.quantidade}
+                        defaultValue={produtos[0].quantidade}
                     />
 
 
@@ -72,7 +73,7 @@ export default function Edicao({produtos}) {
                         name="preco"
                         className="form-control"
                         placeholder="Preço do produto"
-                        defaultValue={produtos.preco}
+                        defaultValue={produtos[0].preco}
                     />
 
 
@@ -80,7 +81,7 @@ export default function Edicao({produtos}) {
                     <select
                         onChange={handleImputChange}
                         name="categoria"
-                        defaultValue={produtos.categoria}
+                        defaultValue={produtos[0].categoria}
                     >
                         <option value="Calça">Calça</option>
                         <option value="Camisa">Camisa</option>
@@ -93,12 +94,12 @@ export default function Edicao({produtos}) {
                         onChange={handleImputChange}
                         // onChange={(e) => props.setProduto(e.target.value)}
                         name="tamanho"
-                        defaultValue={produtos.tamanho}
+                        defaultValue={produtos[0].tamanho}
                     >
                         <option value="PP">PP</option>
                         <option value="P">P</option>
                         <option value="M">M</option>
-                        <option value="GG">G</option>
+                        <option value="G">G</option>
                         <option value="GG">GG</option>
                     </select>
 

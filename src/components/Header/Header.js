@@ -52,12 +52,12 @@ function Header() {
                                     : null
                             }
 
-                            <li className='nav-item'>
+                            {/* <li className='nav-item'>
                                 <Link className="nav-link" to="/Perfil">Perfil</Link>
-                            </li>
-                            <li className='nav-item'>
+                            </li> */}
+                            {/* <li className='nav-item'>
                                 <Link className="nav-link" to="/BoxAdmPag">teste</Link>
-                            </li>
+                            </li> */}
                             {
                                 token ?
                                     <li className='nav-item nav-link mouse'
