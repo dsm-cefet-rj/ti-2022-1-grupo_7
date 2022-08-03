@@ -3,9 +3,11 @@ import BoxAdm from "../components/BoxAdm/BoxAdm"
 
 function BoxAdmPag(){
     
+    const produto = useSelector(state=>state.box.produtoSelecionado);
+
     return(
         <div>
-            <BoxAdm/>
+            {produto.map((struct) => <BoxAdm produto={struct}/>)}
         </div>
     )
 }

@@ -47,9 +47,6 @@ function Header() {
                                             <li className='nav-item'>
                                                 <Link className="nav-link" to="/Login">Login</Link>
                                             </li>
-                                            <li className='nav-item'>
-                                                <Link className="nav-link" to="/Cadastrar">Cadastrar</Link>
-                                            </li>
                                         </>
                                     )
                                     : null

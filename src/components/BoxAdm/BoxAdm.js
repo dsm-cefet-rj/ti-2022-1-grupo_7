@@ -1,9 +1,18 @@
 import './BoxAdm.css'
 import { useDispatch } from "react-redux";
+import { BrowserRouter as Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import { deleteBox } from '../Redux/boxSlice';
 
-function BoxAdm(){
+function BoxAdm({produto}){
 
+    const dispatch = useDispatch();
+
+    function click(e){
+        e.preventDefault();
+        dispatch(deleteBox(produto.id));
+        window.location.href = "/";
+    }
 
     return(
         <main>
@@ -13,20 +22,21 @@ function BoxAdm(){
                     <div className="row ">
                         <div className="oofset-2 col-sm-12 col-md-12 col-lg-5  box-esq">
                             <img className="w-100 " src='CalcaVerde.jpg' alt="Calça "/>
-                            <p className="preco">R$ <span className="bold">250</span></p>
+                            <p className="preco">R$ <span className="bold">{produto.preco}</span></p>
 
                         </div>
                         <div className="col-sm-12 col-md-12 col-lg-5 box-dir">
-                            <h2 className="nome-produto">Calça Verde</h2>
+                            <h2 className="nome-produto">{produto.nomeProduto}</h2>
                             <section className="descricao"/>
-                                <p className="categoria" id="textos">Calaç muito verde mesmo</p>
-                                <p className="categoria">Tamanho: <b>P</b></p>
-                                <p className="categoria">Categoria: <b>Calça</b></p>
-                                <p className="categoria">Quantidade: <b>4</b></p>
-                                <p className="categoria">id: <b>2</b></p>
+                                <p className="categoria" id="textos">{produto.descProduto}</p>
+                                <p className="categoria">Tamanho: <b>{produto.tamanho}</b></p>
+                                <p className="categoria">Categoria: <b>{produto.categoria}</b></p>
+                                <p className="categoria">Quantidade: <b>{produto.quantidade}</b></p>
                                 <a href="#" className="botao">Comprar</a>
                                 <a href="#" className="botaol">Editar</a>
-                                <a href="#" className="botaol">Excluir</a>
+                                <a href="#" className="botaol" 
+                                onClick={click}
+                                >Excluir</a>
                         </div>
                     </div>
                 </div>

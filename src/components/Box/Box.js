@@ -23,7 +23,7 @@ function Box(props){
                                 <h2 className="mt-2 ">{props.produto.nomeProduto}</h2>
                                 <p>{props.produto.descProduto}</p>
                                 <a onClick={click}>
-                                    <Link className="botao" to="/ProdutoPag" >
+                                    <Link className="botao" to="/BoxAdmPag" >
                                         Comprar
                                     </Link>
                                 </a>
